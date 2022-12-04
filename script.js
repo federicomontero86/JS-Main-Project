@@ -35,7 +35,7 @@ function playRound(playerSelection, computerSelection) {
     computerCaseInsensitive === "rock" &&
     playerCaseInsensitive === "paper"
   ) {
-    return "You Win! Paper beats Rock 🥳🥳🥳";
+    return "You win! Paper beats Rock 🥳🥳🥳";
   } else if (
     computerCaseInsensitive === "rock" &&
     playerCaseInsensitive === "scissors"
