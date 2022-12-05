@@ -9,7 +9,9 @@ function computerPlay() {
 // console.log(computerPlay());
 
 function userPlay() {
-  const playerInput = prompt("Choose Rock, Paper or Scissors!");
+  const playerInput = prompt("Choose Rock, Paper or Scissors!")
+    .split(" ")
+    .join("");
   if (!playerInput) {
     return "No value";
   } else if (
@@ -71,7 +73,17 @@ function game() {
   for (let i = 0; i < 5; i++) {
     // console.log(playRound(playerSelection(), computerPlay()));
     const roundResult = playRound(userPlay(), computerPlay());
-    if (roundResult.includes("win!")) {
+    if (roundResult.includes("type")) {
+      console.log("Please type an option!");
+      alert("Please type an option!");
+      i--;
+      continue;
+    } else if (roundResult.includes("valid")) {
+      console.log("Please choose a valid option!");
+      alert("Please choose a valid option!");
+      i--;
+      continue;
+    } else if (roundResult.includes("win!")) {
       userScore++;
     } else if (roundResult.includes("lose!")) {
       computerScore++;
