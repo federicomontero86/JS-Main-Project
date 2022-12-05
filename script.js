@@ -70,6 +70,7 @@ function game() {
   let userScore = 0;
   let computerScore = 0;
   alert("Let's play Rock Scissors Paper Game against the Computer!");
+  alert("We will play 5 rounds to know the winner! Let's start!");
   for (let i = 0; i < 5; i++) {
     // console.log(playRound(playerSelection(), computerPlay()));
     const roundResult = playRound(userPlay(), computerPlay());
@@ -118,10 +119,10 @@ function game() {
     );
   } else {
     console.log(
-      `We have a draw!! Let's try again!!\nFinal Result: ${userScore}-${computerScore}`
+      `We have a draw ⚖️ Let's try again!!\nFinal Result: ${userScore}-${computerScore}`
     );
     alert(
-      `We have a draw!! Let's try again!!\nFinal Result: ${userScore}-${computerScore}`
+      `We have a draw ⚖️ Let's try again!!\nFinal Result: ${userScore}-${computerScore}`
     );
   }
 }
